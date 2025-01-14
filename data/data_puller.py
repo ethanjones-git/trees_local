@@ -24,7 +24,7 @@ class puller:
         with open(api_path) as f:
             out = f.readlines()[1:]
 
-        return out
+        return out[0]
     
     def get_coordinate_list(self,top_right,bottom_left):
         """
@@ -66,7 +66,7 @@ class puller:
 
         return lat_lon_returned
     
-    def request_image(self,coordinates,path):
+    def request_image(self,coordinates):
         """
 
         """
@@ -81,7 +81,8 @@ class puller:
             lat_name,lon_name = point[0].replace(".","_"), point[1].replace("-","_").replace(".","_")
 
             # set path
-            path_ = path + f'/park_{lat_name}_{lon_name}.png'
+            path_ = self.path + '/images'
+            path_ = path_ + f'/park_{lat_name}_{lon_name}.png'
 
             # set url
             url = f'https://maps.googleapis.com/maps/api/staticmap?center={point[0]},{point[1]}&zoom=21&size=800x800&maptype=satellite&key={key}'
@@ -98,7 +99,10 @@ class puller:
                     lat_name,lon_name = point[0].replace(".","_"),point[1].replace("-","_").replace(".","_")
 
                     # set path
-                    path_ = path + f'/park_{lat_name}_{lon_name}.png'
+                    path_ = self.path + '/data/images'
+                    path_ = path_ + f'/park_{lat_name}_{lon_name}.png'
+
+                    print(path_)
 
                     # set url
                     url = f'https://maps.googleapis.com/maps/api/staticmap?center={point[0]},{point[1]}&zoom=21&size=800x800&maptype=satellite&key={key}'
@@ -109,4 +113,4 @@ class puller:
                     time.sleep(5)
 
                 except:
-                    print(f"failed at {i}")
+                    print(f"failed at {point}")
