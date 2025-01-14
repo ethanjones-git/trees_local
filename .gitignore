@@ -1,0 +1,14 @@
+# Ignore all `.log` files
+*.log
+
+# Ignore the `node_modules` directory
+node_modules/
+
+# Ignore `.env` file
+.env
+
+# Ignore all `.tmp` files in any directory
+*.tmp
+
+# Ignore everything in a specific folder except a file
+keys.txt

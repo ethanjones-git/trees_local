@@ -26,8 +26,10 @@ action: a simple baseline model is trained and tested on the dataset.
 """
 
 from data.data_puller import puller
+from PIL import Image
+
 
 puller = puller()
 out = puller.get_api()
 
-print(out)
+print(out[0])
