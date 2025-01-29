@@ -26,6 +26,7 @@ action: a simple baseline model is trained and tested on the dataset.
 """
 
 from data.data_puller import puller
+from analysis.bounding_box import image_loader
 
 def pull_images_from_google_maps():
     # call the puller
@@ -36,4 +37,8 @@ def pull_images_from_google_maps():
     out = puller.get_coordinate_list(top_right,bottom_left)
 
     # export images to the data/image file
-    puller.request_image(out[0:50])
+    #puller.request_image(out[0:50])
+
+out = image_loader()
+
+print(out)
