@@ -25,20 +25,19 @@ params: dataset, annotations, model parameters
 action: a simple baseline model is trained and tested on the dataset. 
 """
 
-from data.data_puller import puller
-from analysis.bounding_box import image_loader
+from data.data_puller import Puller
 
-def pull_images_from_google_maps():
+def BalboaParkPuller(start,stop):
     # call the puller
-    puller = puller()
+    puller = Puller()
 
     # get coordinate list
     top_right,bottom_left = ('32.741004', '-117.149224'), ('32.737794', '-117.159011')
     out = puller.get_coordinate_list(top_right,bottom_left)
 
     # export images to the data/image file
-    #puller.request_image(out[0:50])
+    puller.request_image(out[start:stop])
 
-out = image_loader()
 
-print(out)
+start,stop = 500,510
+BalboaParkPuller(start,stop)

@@ -1,0 +1,3 @@
+How to run imagelabelling software in terminal run 
+labelImg
+

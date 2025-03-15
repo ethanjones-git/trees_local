@@ -3,13 +3,14 @@ Ethan Jones
 01/12/2025
 
 Create a class that pulls data from google maps api.
+
 """
 import os
 import time
 import requests
 from PIL import Image
 
-class puller:
+class Puller:
 
     def __init__(self):
 

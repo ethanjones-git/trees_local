@@ -1,0 +1,26 @@
+<annotation>
+	<folder>images</folder>
+	<filename>park_32_741004__117_14941400000001.png</filename>
+	<path>/Users/ethanjones/projects/trees_local/data/images/park_32_741004__117_14941400000001.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>palm</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>185</xmin>
+			<ymin>411</ymin>
+			<xmax>318</xmax>
+			<ymax>554</ymax>
+		</bndbox>
+	</object>
+</annotation>
