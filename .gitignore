@@ -12,3 +12,6 @@ node_modules/
 
 # Ignore everything in a specific folder except a file
 keys.txt
+
+# Ignore backup images data
+.images_backup
